@@ -1,0 +1,65 @@
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 40vh; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nav-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px; 
+  z-index: 10; 
+}
+
+.nav-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-top:-10px;
+}
+
+.logo {
+  height: 70px;
+}
+
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  width: 35px;
+  margin-top:-10px;
+  cursor: pointer;
+}
+
+.slide-in-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: white; 
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 20; 
+}
+
+.slide-in-menu.open {
+  transform: translateX(0);
+}
+
+.close-btn {
+  width: 30px; 
+  cursor: pointer;
+}
+
+.nav-bar-large {
+  display: none; 
+}
