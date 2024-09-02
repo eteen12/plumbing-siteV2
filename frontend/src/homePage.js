@@ -9,15 +9,17 @@ function HomePage() {
   };
 
   return (
-    <div
-      className="image-container"
-      style={{
-        backgroundImage: "url(/images/plumber.png)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div class="home-wrapper">
+      <div
+        className="image-container"
+        style={{
+          backgroundImage: "url(/images/plumber.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+
       <nav className="nav-wrapper">
         <div className="nav-content-wrapper">
           <div className="logo-wrapper">
@@ -83,6 +85,10 @@ function HomePage() {
           </div>
         </nav>
       </nav>
+      <div className="text-content-wrapper">
+        <h1 className="header">PLUMBING & PLUMBING CO</h1>
+      </div>
+    </div>
     </div>
   );
 }
