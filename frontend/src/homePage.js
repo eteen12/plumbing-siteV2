@@ -95,7 +95,8 @@ function HomePage() {
           </nav>
         </nav>
         <div className="text-content-wrapper">
-          <h1 className="header">PLUMBING & PLUMBING CO</h1>
+          <p className="header">Kelownas finest</p>
+          <h1 className="body-text">Industrial and Commercial Plumbing Services</h1>
         </div>
       </div>
     </div>
