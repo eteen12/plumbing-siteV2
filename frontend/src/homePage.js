@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import "./homePage.css";
 
 function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [users, setUsers] = useState([]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  useEffect(() => {
+    fetch('/api/users')
+      .then(response => response.json())
+      .then(data => setUsers(data.users))
+      .catch(error => console.error('Error fetching users:', error));
+  }, []);
 
   return (
-    <div class="home-wrapper">
+    <div className="home-wrapper">
       <div
         className="image-container"
         style={{
@@ -99,7 +106,16 @@ function HomePage() {
           <h1 className="body-text">Industrial and Commercial Plumbing Services</h1>
         </div>
       </div>
+      <div>
+      <h1>Users</h1>
+      <ul>
+        {users.map((user, index) => (
+          <li key={index}>{user}</li>
+        ))}
+      </ul>
     </div>
+    </div>
+    
   );
 }
 
